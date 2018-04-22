@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
       <div className="App">
 
     <Navbar>
+      {/* logo should go here, needs to be chosen or created */}
       <a className="navbar-brand" href="#">Film Forecast</a>      
       <form className="form-inline">
         <button className="btn btn-primary logIn" type="submit">Log In</button>
@@ -16,13 +18,14 @@ class App extends Component {
       </form>
     </Navbar>
         
-        <div className="container">
+      <div className="container">
         <p className="App-intro">
           Let the weather pick your movie!
         </p>
         <button className="btn btn-primary recButton" type="submit">Movie Recommendations</button>
         </div>
       </div>
+
     );
   }
 }
