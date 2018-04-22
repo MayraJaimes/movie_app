@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+body {
+  background-image: url(/assets/images/clouds.jpg);
+  background-size: cover;
+}
+
 /* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -23,6 +28,7 @@
   margin: 0 auto;
   padding-top: 200px;
   padding-bottom: 20px;
+  color: #FFEEDB;
 }
 
 

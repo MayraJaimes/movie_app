@@ -1,6 +1,7 @@
 .navbar {
-    background-color: #4C3B4D;
-    color: white;
+    background-color: #525067;
+    box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+
 }
 
 .navbar-brand {
@@ -8,8 +9,9 @@
 }
 
 .btn {
-    background-color: #61C9A8;
+    background-color: #3d6387;
     border-style: none;
     margin: 0 10px;
     color: #FFEEDB;
+    box-shadow: 0 14px 28px rgba(0,0,0,.25);
 }
