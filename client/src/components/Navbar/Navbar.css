@@ -1,0 +1,15 @@
+.navbar {
+    background-color: #4C3B4D;
+    color: white;
+}
+
+.navbar-brand {
+    color: #FFEEDB;
+}
+
+.btn {
+    background-color: #61C9A8;
+    border-style: none;
+    margin: 0 10px;
+    color: #FFEEDB;
+}
