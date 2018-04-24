@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Landing from "./pages/Landing";
+import Options from "./pages/Options";
+import Movies from "./pages/Movies";
+import NotFound from "./pages/NotFound";
 import Navbar from './components/Navbar/Navbar';
 
-class App extends Component {
-
-  render() {
-    return (
-      <div className="App">
-
+const App = () => (
+  <Router>
+    <div>
     <Navbar>
       {/* logo should go here, needs to be chosen or created */}
       <a className="navbar-brand" href="#">Film Forecast</a>   
@@ -18,17 +18,14 @@ class App extends Component {
         <button className="btn btn-primary signUp" type="submit">Sign Up</button>
       </form>
     </Navbar>
-        
-      <div className="container">
-        <p className="App-intro">
-          Let the weather pick your movie!
-        </p>
-        <button className="btn btn-primary recButton" type="submit">Movie Recommendations</button>
-        </div>
-      </div>
-
-    );
-  }
-}
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/options" component={Options} />
+        <Route exact path="/options/:id" component={Movies} />
+        <Route component={NotFound} />
+      </Switch>
+    </div>
+  </Router>
+);
 
 export default App;
