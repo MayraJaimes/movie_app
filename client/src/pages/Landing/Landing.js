@@ -16,6 +16,7 @@ class Landing extends Component {
         </p>
         <button className="btn btn-primary recButton" type="submit">Movie Recommendations</button>
         </div>
+        
       </div>
 
     );
