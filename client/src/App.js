@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Options from "./pages/Options";
 import Movies from "./pages/Movies";
@@ -17,11 +18,11 @@ const App = () => (
       <input type='text' name='cityname' id='cityname' placeholder='City Name' />   
       <form className="form-inline">
 
-        <Link to="/signin">
+        <Link to={"/signin"}>
           <button className="btn btn-primary logIn" type="submit">Sign In</button>
         </Link>
 
-        <Link to="/signup">
+        <Link to={"/signup"}>
           <button className="btn btn-primary signUp" type="submit">Sign Up</button>
         </Link>
   

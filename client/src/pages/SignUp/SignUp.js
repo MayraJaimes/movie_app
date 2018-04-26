@@ -1,6 +1,6 @@
 import React from "react";
 
-export const SignUp = props => (
+const SignUp = () => (
   <form class="form-signin" id="signup" name="signup" method="POST" action="/signup">
       <h2 class="form-signin-heading">Sign Up!</h2>
       <input type="email" class="form-control" name="email" placeholder="Email Address" autofocus="" required />
@@ -10,3 +10,5 @@ export const SignUp = props => (
       <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
   </form>
 );
+
+export default SignUp;
