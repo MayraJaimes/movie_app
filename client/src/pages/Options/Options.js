@@ -21,7 +21,11 @@ class Options extends Component {
                                 <button className="btn btn-primary weDecide" type="submit">Let us decide for you!</button>
                             </form>                                      
                     </div>
+
                  </div>
+
+
+            
 
 
         )
