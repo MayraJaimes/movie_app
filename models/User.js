@@ -1,4 +1,5 @@
 // importing mongoose package
+var bcrypt = require("bcrypt-nodejs");
 let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
@@ -31,6 +32,12 @@ let userSchema = new Schema({
     },
     survey: [surveyQuestion]
 });
+
+// function to validate password
+userSchema.methods.validPassword = function(password) {
+  const result = bcrypt.compareSync(password, this.password);
+  return result;
+};
 
 // exporting the User model
 module.exports = mongoose.model('User' , userSchema);
