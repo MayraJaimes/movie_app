@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Options from "./pages/Options";
 import Movies from "./pages/Movies";
+import MoviesWatched from "./pages/MoviesWatched";
 import NotFound from "./pages/NotFound";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
@@ -33,6 +34,7 @@ const App = () => (
         <Route exact path="/signin" component={SignIn} />
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/options" component={Options} />
+        <Route exact path="/movieswatched" component={MoviesWatched} />
         <Route exact path="/options/:id" component={Movies} />
         <Route component={NotFound} />
       </Switch>
