@@ -1,19 +1,16 @@
 import axios from "axios";
 
 let APIKEY = "api_key=777bd0d9f891f6d2107862225ce02abb";
-
 let BASEURL = "https://api.themoviedb.org/3/discover/movie?" + APIKEY + "&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page="
-
 let URL = "&with_genres=";
 
 export default {
-  search: function(genre, page) {
+  search: function(genre) {
+    var page = Math.floor(Math.random() * 500) + 1;
+    console.log("PAGE", page);
     return axios.get(BASEURL + page + URL + genre);
   }
 };
-
-// https://api.themoviedb.org/3/movie/550?api_key=777bd0d9f891f6d2107862225ce02abb
-
 
 // {
 //   "genres": [
