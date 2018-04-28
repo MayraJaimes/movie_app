@@ -41,6 +41,7 @@ return (
         <Route exact path="/signin" component={SignIn} />
         <Route exact path="/signup" component={SignUp} />
         <Route path="/options" render={() => <Options userChoices={this.state.userChoices} />} />
+        <Route exact path="/movies/:id" component={Movies} />
         <Route exact path="/movieswatched" component={MoviesWatched} />
         <Route component={NotFound} />
       </Switch>
