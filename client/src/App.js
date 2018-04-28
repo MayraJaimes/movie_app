@@ -10,6 +10,7 @@ import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 import Navbar from './components/Navbar/Navbar';
 import userChoices from "./userChoices.json";
+import Genre from "./components/Genre/Genre";
 
 class App extends Component {
   state = {
@@ -39,7 +40,16 @@ return (
         <Route exact path="/" component={Landing} />
         <Route exact path="/signin" component={SignIn} />
         <Route exact path="/signup" component={SignUp} />
-        <Route path="/options" component={() => <Options userChoices={this.state.userChoices} />} />
+        <Route path="/options" component={() => <Options>
+          {this.state.userChoices.map(card => (
+            <Genre
+              userChoices={userChoices}
+              key={userChoices.id}
+            />
+          ))}
+        </Options>} />
+
+
         <Route exact path="/movieswatched" component={MoviesWatched} />
         <Route exact path="/options/:id" component={Movies} />
         <Route component={NotFound} />
@@ -48,6 +58,10 @@ return (
   </Router>
   )}
 }
+
+
+
+
 
 export default App;
 
