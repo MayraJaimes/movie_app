@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Landing from "./pages/Landing/Landing";
-import Options from "./pages/Options/Options";
+import Questions from "./pages/Questions/Questions";
 import Movies from "./pages/Movies/Movies";
 import NotFound from "./pages/NotFound/NotFound";
 import SignIn from "./pages/SignIn/SignIn";
@@ -14,7 +14,6 @@ class App extends Component {
   state = {
     userChoices: userChoices
   };
-//user choices is from JSON file and it includes genre, question, weather
 
 render() {
 return (
@@ -22,7 +21,9 @@ return (
     <div>
       <Navbar>
       {/* logo should go here, needs to be chosen or created */}
-        <a className="navbar-brand" href="#">Film Forecast</a>   
+        <Link to={"/"}>
+          <a className="navbar-brand">Film Forecast</a>
+        </Link> 
         <input type='text' name='cityname' id='cityname' placeholder='City Name' />   
         <form className="form-inline">
           <Link to={"/signin"}>
@@ -38,7 +39,7 @@ return (
         <Route exact path="/" component={Landing} />
         <Route exact path="/signin" component={SignIn} />
         <Route exact path="/signup" component={SignUp} />
-        <Route path="/options" render={() => <Options userChoices={this.state.userChoices} />} />
+        <Route path="/options" render={() => <Questions userChoices={this.state.userChoices} />} />
         <Route exact path="/movies/:id" component={Movies} />
         <Route component={NotFound} />
       </Switch>
@@ -47,21 +48,4 @@ return (
   )}
 }
 
-
-
-
-
 export default App;
-
-
-
-// <Wrapper>
-// {this.state.cards.map(card => (
-//   <Card
-//     card={card}
-//     key={card.id}
-//     outcome={this.outcome}
-//     gameEnd={this.state.gameEnd}
-//   />
-// ))}
-// </Wrapper>
