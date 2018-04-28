@@ -1,42 +1,47 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { List, ListItem } from "../../components/List";
 import API from "../../utils/API";
 import './Movies.css';
 
 class Movies extends Component {
   state = {
-    movies: []
+    movies: [].slice(0, 5)
   };
   componentDidMount() {
       API.search(this.props.match.params.id, 5)
         .then(res =>
-          this.setState({ movies: res.data.results}, () => console.log(res.data))
+          this.setState({ movies: res.data.results}, () => console.log(res.data.results))
         )
         .catch(err => console.log(err));
     };
-  
+
 
   render() {
     return (
       <div>
-        <h1>
-          {this.state.book.title} by {this.state.book.author}
-        </h1>
-
-        <article>
-        <h1>Synopsis</h1>
-        <p>
-          {this.state.book.synopsis}
-        </p>
-        </article>
-
-        <Link to="/">← Back to Authors</Link>
+        <h1>Movies Recommended</h1>
+        {this.state.movies.length ? (
+          <List>
+            {this.state.movies.map(movie => (
+              <ListItem key={movie.id}>
+                <Link to={"/movie/" + movie.id}>
+                  <img className="movieImage" alt={movie.title} src={"https://image.tmdb.org/t/p/w600_and_h900_bestv2" + movie.poster_path}/>
+                </Link>
+              </ListItem>
+            ))}
+          </List>
+        ) : (
+        <h3>No Results to Display</h3>
+        )}
       </div>
     );
   }
 }
 
 export default Movies;
+  
+  // <DeleteBtn onClick={() => this.viewMovie(movie._id)} />
 
 
 
@@ -66,3 +71,11 @@ export default Movies;
 
 
 
+
+
+
+
+
+
+
+  

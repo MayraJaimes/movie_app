@@ -1,16 +1,14 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Landing from "./pages/Landing";
+import Landing from "./pages/Landing/Landing";
 import Options from "./pages/Options/Options";
-import Movies from "./pages/Movies";
-import MoviesWatched from "./pages/MoviesWatched";
-import NotFound from "./pages/NotFound";
+import Movies from "./pages/Movies/Movies";
+import NotFound from "./pages/NotFound/NotFound";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 import Navbar from './components/Navbar/Navbar';
 import userChoices from "./userChoices.json";
-import Genre from "./components/Genre/Genre";
 
 class App extends Component {
   state = {
@@ -42,7 +40,6 @@ return (
         <Route exact path="/signup" component={SignUp} />
         <Route path="/options" render={() => <Options userChoices={this.state.userChoices} />} />
         <Route exact path="/movies/:id" component={Movies} />
-        <Route exact path="/movieswatched" component={MoviesWatched} />
         <Route component={NotFound} />
       </Switch>
     </div>
