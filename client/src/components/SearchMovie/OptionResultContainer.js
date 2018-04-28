@@ -1,11 +1,56 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 
-class OptionResultContainer extends Component {
+class MovieResultContainer extends Component {
   state = {
-    search: "",
-    results: []
+    genrePicked: "",
+    movies: []
   };
+
+  //PAGE
+  // the genre we get from the button the user clicks
+  // get random number from 1-1000  >> to get the PAGE
+  // var randomPage = Math.floor(Math.random() * 1000) + 1;
+  
+  //SHUFFLE RESULTS
+  // var array;
+  // get the 20 array results
+  // function shuffleArray(array) {
+  //   for (var i = array.length - 1; i > 0; i--) {
+  //       var j = Math.floor(Math.random() * (i + 1));
+  //       var temp = array[i];
+  //       array[i] = array[j];
+  //       array[j] = temp;
+  //   }
+  // return array
+  //}
+  
+  //GET 5 MOVIES
+  //array.slice(0, 5)
+  
+  //API.search(genre, page)
+  
+    getMovies = () => {
+      API.search(35, 5)
+        .then(res =>
+          this.setState({ movies: res.data.results}, () => console.log(res.data))
+        )
+        .catch(err => console.log(err));
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   searchMovie = query => {
     API.search(query)
@@ -13,11 +58,10 @@ class OptionResultContainer extends Component {
       .catch(err => console.log(err));
   };
 
-  handleInputChange = event => {
+  onclick = event => {
     const name = event.target.name;
-    const value = event.target.value;
     this.setState({
-      [name]: value
+      genrePicked: name
     });
   };
 
@@ -33,7 +77,7 @@ class OptionResultContainer extends Component {
         <SearchForm
           search={this.state.search}
           handleFormSubmit={this.handleFormSubmit}
-          handleInputChange={this.handleInputChange}
+          onclick={this.onclick}
         />
         <ResultList results={this.state.results} />
       </div>
@@ -41,4 +85,4 @@ class OptionResultContainer extends Component {
   }
 }
 
-export default SearchResultContainer;
+export default MovieResultContainer;

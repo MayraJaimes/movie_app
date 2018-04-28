@@ -1,0 +1,17 @@
+[
+  {
+    "weather": "rainy",
+    "genre": 35,
+    "option": "In the mood for happy movies?"
+  },
+  {
+    "weather": "rainy",
+    "genre": 27,
+    "option": "In the mood for scary Movies?"
+  },
+  {
+    "weather": "rainy",
+    "genre": 10749,
+    "option": "In the mood for romance Movies?"
+  }
+]
