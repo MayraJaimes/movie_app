@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Landing from "./pages/Landing";
@@ -39,7 +39,7 @@ return (
         <Route exact path="/" component={Landing} />
         <Route exact path="/signin" component={SignIn} />
         <Route exact path="/signup" component={SignUp} />
-        <Route exact path="/options" component={Options} />
+        <Route path="/options" component={() => <Options userChoices={this.state.userChoices} />} />
         <Route exact path="/movieswatched" component={MoviesWatched} />
         <Route exact path="/options/:id" component={Movies} />
         <Route component={NotFound} />
@@ -50,3 +50,16 @@ return (
 }
 
 export default App;
+
+
+
+// <Wrapper>
+// {this.state.cards.map(card => (
+//   <Card
+//     card={card}
+//     key={card.id}
+//     outcome={this.outcome}
+//     gameEnd={this.state.gameEnd}
+//   />
+// ))}
+// </Wrapper>

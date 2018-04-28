@@ -28,48 +28,25 @@ class MovieResultContainer extends Component {
   //GET 5 MOVIES
   //array.slice(0, 5)
   
-  //API.search(genre, page)
   
-    getMovies = () => {
-      API.search(35, 5)
+  getMovies = (genre, page) => {
+      API.search(genre, page)
         .then(res =>
           this.setState({ movies: res.data.results}, () => console.log(res.data))
         )
         .catch(err => console.log(err));
     };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  searchMovie = query => {
-    API.search(query)
-      .then(res => this.setState({ results: res.data.data }))
-      .catch(err => console.log(err));
-  };
-
-  onclick = event => {
-    const name = event.target.name;
-    this.setState({
-      genrePicked: name
-    });
-  };
-
-  // When the form is submitted, search the Giphy API for `this.state.search`
-  handleFormSubmit = event => {
-    event.preventDefault();
-    this.searchGiphy(this.state.search);
-  };
+    render() {
+      return (
+        <div>
+          <div onClick={this.handleClickEvent}>
+            <img alt={this.props.card.desc} src={this.props.card.image} />
+          </div>
+        </div>
+      );
+    }
+  }
 
   render() {
     return (
