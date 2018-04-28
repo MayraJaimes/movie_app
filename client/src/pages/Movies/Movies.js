@@ -1,21 +1,20 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { List, ListItem } from "../../components/List";
+import { List } from "../../components/List/List";
+import { ListItem } from "../../components/List/ListItem";
 import API from "../../utils/API";
 import './Movies.css';
 
 class Movies extends Component {
   state = {
-    movies: [].slice(0, 5)
+    movies: []
   };
   componentDidMount() {
-      API.search(this.props.match.params.id, 5)
-        .then(res =>
-          this.setState({ movies: res.data.results}, () => console.log(res.data.results))
-        )
-        .catch(err => console.log(err));
-    };
-
+    API.search(this.props.match.params.id)
+      .then(res =>
+        this.setState({ movies: res.data.results}, () => console.log(res.data.results)))
+      .catch(err => console.log(err));
+  };
 
   render() {
     return (
@@ -40,17 +39,6 @@ class Movies extends Component {
 }
 
 export default Movies;
-  
-  // <DeleteBtn onClick={() => this.viewMovie(movie._id)} />
-
-
-
-
-
-  //PAGE
-  // the genre we get from the button the user clicks
-  // get random number from 1-1000  >> to get the PAGE
-  // var randomPage = Math.floor(Math.random() * 1000) + 1;
   
   //SHUFFLE RESULTS
   // var array;

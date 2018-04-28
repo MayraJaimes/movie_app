@@ -1,7 +1,6 @@
 .navbar {
     background-color: #525067;
     box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
-
 }
 
 .navbar-brand {
@@ -17,15 +16,12 @@
 }
 
 .btn:hover {
-
     background-color: #508AC0;
     border-style: none;
     color: #FFEEDB;
-
 }
 
 .btn:active {
-
     background-color: #508AC0;
     border-style: none;
     color: #FFEEDB;
@@ -35,5 +31,4 @@
     background-color: #508AC0;
     border-style: none;
     color: #FFEEDB;
-
 }

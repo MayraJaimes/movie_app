@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Genre from '../../components/Genre'
+import Genre from '../../components/Genre/Genre'
 
 const Questions = props => {
   console.log('props in Options', props);
