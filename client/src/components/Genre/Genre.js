@@ -3,14 +3,11 @@ import React, { Component } from "react";
 class Genre extends Component {
   
   render() {
+    console.log('this.props in Genre', this.props)
     return (
-      <div>
         <div>
-
-            <button className="btn btn-primary">{this.props.choices.question}</button>
-
+            <button className="btn btn-primary">{this.props.question}</button>
         </div>
-      </div>
     );
   }
 }

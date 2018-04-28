@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Landing from "./pages/Landing";
-import Options from "./pages/Options";
+import Options from "./pages/Options/Options";
 import Movies from "./pages/Movies";
 import MoviesWatched from "./pages/MoviesWatched";
 import NotFound from "./pages/NotFound";
@@ -40,18 +40,8 @@ return (
         <Route exact path="/" component={Landing} />
         <Route exact path="/signin" component={SignIn} />
         <Route exact path="/signup" component={SignUp} />
-        <Route path="/options" component={() => <Options>
-          {this.state.userChoices.map(card => (
-            <Genre
-              userChoices={userChoices}
-              key={userChoices.id}
-            />
-          ))}
-        </Options>} />
-
-
+        <Route path="/options" render={() => <Options userChoices={this.state.userChoices} />} />
         <Route exact path="/movieswatched" component={MoviesWatched} />
-        <Route exact path="/options/:id" component={Movies} />
         <Route component={NotFound} />
       </Switch>
     </div>

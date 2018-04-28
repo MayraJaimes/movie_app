@@ -1,8 +1,20 @@
 import React from "react";
 
-export const Options = props => (
+import Genre from '../../components/Genre'
+
+const Options = props => {
+  console.log('props in Options', props);
+  return (
   <li>
-    {props.children}
+    {props.userChoices.map(userChoice => 
+      <Genre
+        question={userChoice.question}
+        key={userChoice.id}
+        genre={userChoice.genre}
+      />
+    )}
   </li>
-);
+)};
+
+export default Options;
 
