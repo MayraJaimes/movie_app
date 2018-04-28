@@ -1,103 +1,99 @@
 import axios from "axios";
 
 let APIKEY = "api_key=777bd0d9f891f6d2107862225ce02abb";
-let BASEURL = "https://api.themoviedb.org/3/discover/movie?" + APIKEY + "&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=";
-
-console.log(BASEURL);
-console.log("https://api.themoviedb.org/3/discover/movie?api_key=777bd0d9f891f6d2107862225ce02abb&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=18");
-
+let BASEURL = "https://api.themoviedb.org/3/discover/movie?" + APIKEY + "&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page="
+let URL = "&with_genres=";
 
 export default {
-  search: function(query) {
-    return axios.get(BASEURL + query);
+  search: function(genre) {
+    var page = Math.floor(Math.random() * 500) + 1;
+    console.log("PAGE", page);
+    return axios.get(BASEURL + page + URL + genre);
   }
 };
 
-// https://api.themoviedb.org/3/movie/550?api_key=777bd0d9f891f6d2107862225ce02abb
+// {
+//   "genres": [
+//     {
+//       "id": 28,
+//       "name": "Action"
+//     },
+//     {
+//       "id": 12,
+//       "name": "Adventure"
+//     },
+//     {
+//       "id": 16,
+//       "name": "Animation"
+//     },
+//     {
+//       "id": 35,
+//       "name": "Comedy"
+//     },
+//     {
+//       "id": 80,
+//       "name": "Crime"
+//     },
+//     {
+//       "id": 99,
+//       "name": "Documentary"
+//     },
+//     {
+//       "id": 18,
+//       "name": "Drama"
+//     },
+//     {
+//       "id": 10751,
+//       "name": "Family"
+//     },
+//     {
+//       "id": 14,
+//       "name": "Fantasy"
+//     },
+//     {
+//       "id": 36,
+//       "name": "History"
+//     },
+//     {
+//       "id": 27,
+//       "name": "Horror"
+//     },
+//     {
+//       "id": 10402,
+//       "name": "Music"
+//     },
+//     {
+//       "id": 9648,
+//       "name": "Mystery"
+//     },
+//     {
+//       "id": 10749,
+//       "name": "Romance"
+//     },
+//     {
+//       "id": 878,
+//       "name": "Science Fiction"
+//     },
+//     {
+//       "id": 10770,
+//       "name": "TV Movie"
+//     },
+//     {
+//       "id": 53,
+//       "name": "Thriller"
+//     },
+//     {
+//       "id": 10752,
+//       "name": "War"
+//     },
+//     {
+//       "id": 37,
+//       "name": "Western"
+//     }
+//   ]
+// }
 
 
-
-
-{
-  "genres": [
-    {
-      "id": 28,
-      "name": "Action"
-    },
-    {
-      "id": 12,
-      "name": "Adventure"
-    },
-    {
-      "id": 16,
-      "name": "Animation"
-    },
-    {
-      "id": 35,
-      "name": "Comedy"
-    },
-    {
-      "id": 80,
-      "name": "Crime"
-    },
-    {
-      "id": 99,
-      "name": "Documentary"
-    },
-    {
-      "id": 18,
-      "name": "Drama"
-    },
-    {
-      "id": 10751,
-      "name": "Family"
-    },
-    {
-      "id": 14,
-      "name": "Fantasy"
-    },
-    {
-      "id": 36,
-      "name": "History"
-    },
-    {
-      "id": 27,
-      "name": "Horror"
-    },
-    {
-      "id": 10402,
-      "name": "Music"
-    },
-    {
-      "id": 9648,
-      "name": "Mystery"
-    },
-    {
-      "id": 10749,
-      "name": "Romance"
-    },
-    {
-      "id": 878,
-      "name": "Science Fiction"
-    },
-    {
-      "id": 10770,
-      "name": "TV Movie"
-    },
-    {
-      "id": 53,
-      "name": "Thriller"
-    },
-    {
-      "id": 10752,
-      "name": "War"
-    },
-    {
-      "id": 37,
-      "name": "Western"
-    }
-  ]
-}
 
 
 
