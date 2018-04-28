@@ -2,14 +2,19 @@
   text-align: center;
 }
 
-.App-logo {
+body {
+  background-image: url(/assets/images/clouds.jpg);
+  background-size: cover;
+}
+
+/* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
-}
+} */
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 100px;
   padding: 20px;
   color: white;
 }
@@ -19,7 +24,11 @@
 }
 
 .App-intro {
-  font-size: large;
+  font-size: 40px;
+  margin: 0 auto;
+  padding-top: 200px;
+  padding-bottom: 20px;
+  color: #FFEEDB;
 }
 
 @keyframes App-logo-spin {
