@@ -14,10 +14,8 @@ passport.use(
       console.log(email, "this is email")
       // When a user tries to sign in this code runs
       db.User.findOne({
-        where: {
           email: email
-        }
-      }).then(function(dbUser) {
+        }).then(function(dbUser) {
         // If there's no user with the given email
         console.log(dbUser, "this in passport")
         if (!dbUser) {
