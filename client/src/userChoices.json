@@ -3,18 +3,37 @@
     "id": 1,
     "weather": "rainy",
     "genre": 35,
-    "question": "In the mood for happy movies?"
+    "question": "Need a pick me up?"
   },
   {
     "id": 2,
     "weather": "rainy",
     "genre": 27,
-    "question": "In the mood for scary Movies?"
+    "question": "Wanna get scurred?"
   },
   {
     "id": 3,
     "weather": "rainy",
     "genre": 10749,
-    "question": "In the mood for romance Movies?"
+    "question": "Let us pick for you."
+  },
+  {
+    "id": 4,
+    "weather": "clear",
+    "genre": 12,
+    "question": ""
+  },
+  {
+    "id": 5,
+    "weather": "clear",
+    "genre": 18,
+    "question": ""
+  },
+  {
+    "id": 6,
+    "weather": "clear",
+    "genre": ,
+    "question": "Let us pick for you."
   }
+    
 ]
