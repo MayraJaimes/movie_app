@@ -11,9 +11,19 @@ import Navbar from './components/Navbar/Navbar';
 import userChoices from "./userChoices.json";
 
 class App extends Component {
-  state = {
-    userChoices: userChoices
-  };
+  constructor(props) {
+    super(props)
+    this.state = { 
+      userChoices: userChoices,
+      currentCity: ''
+    };
+  }
+
+  handleCityChange = () => {
+    this.setState({
+      currentCity: this.refs.cityname.value
+    }, ()=> {console.log(this.state.currentCity)});
+  }
 
 render() {
 return (
@@ -24,7 +34,7 @@ return (
         <Link to={"/"}>
           <a className="navbar-brand">Film Forecast</a>
         </Link> 
-        <input type='text' name='cityname' id='cityname' placeholder='City Name' />   
+        <input type='text' name='cityname' ref='cityname' id='cityname' placeholder='City Name' onChange={this.handleCityChange} />   
         <form className="form-inline">
           <Link to={"/signin"}>
             <button className="btn btn-primary logIn" type="submit">Sign In</button>

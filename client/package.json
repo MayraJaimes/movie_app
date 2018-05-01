@@ -12,8 +12,7 @@
   "proxy": {
     "/api/login" : {"target" : "http://localhost:3001"},
     "/api/signup" : {"target" : "http://localhost:3001"},
-    "/logout" : {"target" : "http://localhost:3001"},
-    "/signin" : { "target": "http://localhost:3000" }
+    "/logout" : {"target" : "http://localhost:3001"}
 },
   "scripts": {
     "start": "react-scripts start",

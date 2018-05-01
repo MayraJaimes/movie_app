@@ -1,0 +1,13 @@
+.form-control, #signup{
+    width: 50vw;
+    margin: 10px auto;
+}
+
+.form-signup{
+    margin-bottom: 20px;
+}
+
+.form-signup-heading{
+    color: white;
+    margin: 20px auto;
+}

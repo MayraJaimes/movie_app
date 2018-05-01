@@ -1,11 +1,13 @@
 import React from "react";
 import {Component} from "react";
 import axios from 'axios';
+import './SignIn.css'
 
 class SignIn extends Component {
   login = (evt) => {
         let userData = { email: this.refs.signinemail.value, password: this.refs.signinpassword.value };
         if (!userData.email || !userData.password) {
+          alert('Please enter both Username and Password to signin.')
           return;
         }
 
@@ -26,14 +28,16 @@ class SignIn extends Component {
   }
 
   render(){
-  return (
-  <div className="form-signin" name="signin">
-      <h2 className="form-signin-heading">Please Sign In</h2>
-      <input type="email" className="form-control" ref='signinemail' name="email" placeholder="Email Address" required="" />
-      <input type="password" className="form-control" ref='signinpassword' name="password" placeholder="Password" required="" />
-      <button className="btn btn-lg btn-primary btn-block" id="singin" onClick={this.login}>Sign In</button>
-  </div>
-);
+  return <div className="form-signin" name="signin">
+      <center>
+        <h2 className="form-signin-heading">Please Sign In</h2>
+      </center>
+      <input type="email" className="form-control" ref="signinemail" name="email" placeholder="Email Address" required autoFocus />
+      <input type="password" className="form-control" ref="signinpassword" name="password" placeholder="Password" required />
+      <button className="btn btn-lg btn-primary btn-block" id="signin" onClick={this.login}>
+        Sign In
+      </button>
+    </div>;
 }
 }
 

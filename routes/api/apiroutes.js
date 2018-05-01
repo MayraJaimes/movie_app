@@ -19,7 +19,7 @@ var passport = require("../../config/passport");
       lastname: req.body.lastname
     })
       .then(function () {
-        res.send({ redirect: "/options" });
+        res.send({ redirect: "/signin" });
       })
       .catch(function (err) {
         console.log(err);
