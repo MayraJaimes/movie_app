@@ -1,13 +1,13 @@
 .footer {
-    background-color: darkgrey;
+    background-color: #2d495e !important;
     color: black;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-
+    border-top: 1px solid white;
 }
 
 .nav-link {
-    color: black;
+    color: white;
 }
