@@ -8,8 +8,8 @@
   {
     "id": 2,
     "weather": "rainy",
-    "genre": 27,
-    "question": "Wanna get scurred?"
+    "genre": 18,
+    "question": "I'd rather wallow in my sadness."
   },
   {
     "id": 3,
@@ -20,20 +20,92 @@
   {
     "id": 4,
     "weather": "clear",
-    "genre": 12,
-    "question": ""
+    "genre": 10770,
+    "question": "Are you sure don't want to go outside?"
   },
   {
     "id": 5,
     "weather": "clear",
-    "genre": 18,
-    "question": ""
+    "genre": 12,
+    "question": "I'm in the mood for an adventure (just not outside)!"
   },
   {
     "id": 6,
     "weather": "clear",
-    "genre": ,
+    "genre": 16,
+    "question": "Let us pick for you."
+  },
+  {
+    "id": 7,
+    "weather": "snow",
+    "genre": 28,
+    "question": "I love the snow!"
+  },
+  {
+    "id": 8,
+    "weather": "snow",
+    "genre": 35,
+    "question": "I'm totally over winter."
+  },
+  {
+    "id": 9,
+    "weather": "snow",
+    "genre": 99,
+    "question": "Let us pick for you."
+  },
+  {
+    "id": 10,
+    "weather": "thunderstorms",
+    "genre": 10751,
+    "question": "I'm a wuss!"
+  },
+  {
+    "id": 11,
+    "weather": "thunderstorms",
+    "genre": 27,
+    "question": "I wanna be scurred!"
+  },
+  {
+    "id": 12,
+    "weather": "thunderstorms",
+    "genre": 14,
+    "question": "Let us pick for you."
+  },
+  {
+    "id": 13,
+    "weather": "fog",
+    "genre": 27,
+    "question": "Looks spooky out..."
+  },
+  {
+    "id": 14,
+    "weather": "fog",
+    "genre": 878,
+    "question": "Great day for Sci-Fi."
+  },
+  {
+    "id": 15,
+    "weather": "fog",
+    "genre": 10749,
+    "question": "Let us pick for you."
+  },
+  {
+    "id": 16,
+    "weather": "overcast",
+    "genre": 35,
+    "question": "Ugh, it's so gross outside."
+  },
+  {
+    "id": 17,
+    "weather": "overcast",
+    "genre": 18,
+    "question": "Someone get the ice cream."
+  },
+  {
+    "id": 18,
+    "weather": "overcast",
+    "genre": 10749,
     "question": "Let us pick for you."
   }
-    
+  
 ]
