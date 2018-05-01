@@ -1,12 +1,17 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
-const routes = require("./routes");
-const session = require('express-session');
+var express = require("express");
+var bodyParser = require("body-parser");
+var mongoose = require("mongoose");
+var routes = require("./routes/api/apiroutes");
+var session = require('express-session');
 var passport = require("./config/passport");
 
-const app = express();
-const PORT = process.env.PORT || 3001;
+var app = express();
+var PORT = process.env.PORT || 3001;
+
+mongoose.Promise = global.Promise;
+
+//Connect to the Mongo DB
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/movieapp");
 
 // setting up middleware to serve static files
 if(process.env.NODE_ENV==='production'){
@@ -23,9 +28,6 @@ app.use(passport.session());
 
 // Add routes, both API and view
 app.use(routes);
-
-// Connect to the Mongo DB
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
 
 // Start the API server
 app.listen(PORT, function() {

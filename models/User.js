@@ -3,16 +3,6 @@ var bcrypt = require("bcrypt-nodejs");
 let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
-// defining Survey questions schema
-let surveyQuestion = new Schema({
-    question : {
-        type: String
-    },
-    response: {
-        type: String
-    }
-});
-
 // defining the User schema
 let userSchema = new Schema({
     email: {
@@ -21,16 +11,20 @@ let userSchema = new Schema({
     },
     password: {
         type: String,
-        requires: [true, 'Password cannot be left empty'],
-        validate: [(password)=>password.length>8 , 'Password should be atleast 8 characters.']
+        required: [true, 'Password cannot be left empty']
     },
-    userFirstname: {
+    firstname: {
         type: String
     },
-    userLastname: {
+    lastname: {
         type: String
-    },
-    survey: [surveyQuestion]
+    }
+});
+
+userSchema.pre("save", function(next) {
+  let user = this;
+  user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
+  next();
 });
 
 // function to validate password

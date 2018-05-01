@@ -9,6 +9,12 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4"
   },
+  "proxy": {
+    "/api/login" : {"target" : "http://localhost:3001"},
+    "/api/signup" : {"target" : "http://localhost:3001"},
+    "/logout" : {"target" : "http://localhost:3001"},
+    "/signin" : { "target": "http://localhost:3000" }
+},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
