@@ -28,10 +28,19 @@ var passport = require("../../config/passport");
       });
   });
 
+  router.get('/current_user', function(req,res) {
+    if (req.user) {
+      res.json({'logged_in': true });
+    } else {
+      res.json({ 'logged_in': false });
+    }
+  });
+
   // Route for logging user out
   router.get("/logout", function (req, res) {
     req.logout();
-    res.redirect("/");
+    res.send({redirect: '/'});
   });
+
 
 module.exports = router;
