@@ -9,13 +9,15 @@ import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 import Navbar from './components/Navbar/Navbar';
 import userChoices from "./userChoices.json";
+import axios from 'axios';
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = { 
       userChoices: userChoices,
-      currentCity: ''
+      currentCity: '',
+      loggedin : false
     };
   }
 
@@ -25,26 +27,22 @@ class App extends Component {
     }, ()=> {console.log(this.state.currentCity)});
   }
 
+  checkIfLoggedIn = () => {
+    axios.get('/current_user')
+          .then(response => {
+              this.setState({loggedin: response.data.logged_in})
+          });
+  }
+
+  componentWillMount() {
+    this.checkIfLoggedIn();
+  }
+
 render() {
 return (
   <Router>
     <div>
-      <Navbar>
-      {/* logo should go here, needs to be chosen or created */}
-        <Link to={"/"}>
-          <a className="navbar-brand">Film Forecast</a>
-        </Link> 
-        <input type='text' name='cityname' ref='cityname' id='cityname' placeholder='City Name' onChange={this.handleCityChange} />   
-        <form className="form-inline">
-          <Link to={"/signin"}>
-            <button className="btn btn-primary logIn" type="submit">Sign In</button>
-          </Link>
-          <Link to={"/signup"}>
-            <button className="btn btn-primary signUp" type="submit">Sign Up</button>
-          </Link>
-        </form>
-      </Navbar>
-
+      <Navbar onChange={this.handleCityChange} loggedIn={this.state.loggedin} />
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route exact path="/signin" component={SignIn} />
