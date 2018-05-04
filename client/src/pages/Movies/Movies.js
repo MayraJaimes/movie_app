@@ -13,6 +13,7 @@ class Movies extends Component {
     show : false,
     title: "",
     overview: "",
+    // isOpen : false
 
   };
   componentDidMount() {
@@ -24,8 +25,8 @@ class Movies extends Component {
   };
 
   showModal = (title, overview) => {
-    // console.log(title)
-    // console.log(overview);
+    console.log(title)
+    console.log(overview);
     this.setState({ show: true });
     this.setState({title: title});
     this.setState({overview : overview});
@@ -34,6 +35,10 @@ class Movies extends Component {
   hideModal = () => {
     this.setState({ show: false });
   };
+  saveMovie = () => {
+    //code here to save title to database.
+  }
+
 
   render() {
     return (
@@ -47,6 +52,7 @@ class Movies extends Component {
                   {/* <Link onClick={this.showModal}> */}
                 {/* <Link to={"/movie/" + movie.id}> */}
                   <a onClick={() => this.showModal(movie.title, movie.overview)} data-target="#movieModal" data-toggle="modal" href="#movieModal">
+
                   <img className="card-img-top" alt={movie.title} src={"https://image.tmdb.org/t/p/w600_and_h900_bestv2" + movie.poster_path}/>
                   </a>
                 {/* </Link> */}
@@ -57,10 +63,11 @@ class Movies extends Component {
         ) : (
         <h3>No Results to Display</h3>
         )}
-        <Modal show={this.state.show} handleClose={this.hideModal}>
+        <Modal show={this.state.show} handleClose={this.hideModal} saveMovie={this.saveMovie}>
           <p>{this.state.title}</p>
           <p>{this.state.overview}</p>
         </Modal>
+
       </div>
     );
   }
@@ -87,11 +94,21 @@ export default Movies;
 
 
 
+// BOOSTRAP MODAL TRY:
+
+        // <Modal show={this.state.isOpen} onClose={this.state.toggleModal}>
+        // {this.state.title}
+        // {this.state.overview}
+        // </Modal>
 
 
+{/* <a onClick={this.toggleModal} data-toggle="modal" data-target="#movieModal" data-toggle="modal" href="#movieModal"> */}
 
-
-
+// toggleModal = (title, overview) => {
+//   this.setState({ isOpen: !this.state.isOpen });
+//   this.setState({ title: title });
+//   this.setState({ overview: overview });
+// }
 
 
   
