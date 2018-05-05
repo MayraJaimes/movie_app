@@ -6,6 +6,7 @@ import API from "../../utils/API";
 import './Movies.css';
 import ListWrapper from "../../components/ListWrapper";
 import Modal from "../../components/Modal";
+import unirest from "unirest";
 
 class Movies extends Component {
   state = {
@@ -13,6 +14,7 @@ class Movies extends Component {
     show : false,
     title: "",
     overview: "",
+    availableon:[]
     // isOpen : false
 
   };
@@ -25,11 +27,16 @@ class Movies extends Component {
   };
 
   showModal = (title, overview) => {
-    console.log(title)
-    console.log(overview);
     this.setState({ show: true });
     this.setState({title: title});
     this.setState({overview : overview});
+    unirest.get("https://utelly-tv-shows-and-movies-availability-v1.p.mashape.com/lookup?country=us&term=" + title)
+      .header("X-Mashape-Key", "yuFDFvrP7zmsh3waefRbZZyBHWK4p1i7GhOjsnN5TY3aszxBBO")
+      .header("Accept", "application/json")
+      .end(function (result) {
+        this.setState({availableon: result.body.results[0].locations})
+        console.log(result.body.results[0].locations);
+      }.bind(this)); 
   };
 
   hideModal = () => {
@@ -66,6 +73,12 @@ class Movies extends Component {
         <Modal show={this.state.show} handleClose={this.hideModal} saveMovie={this.saveMovie}>
           <p>{this.state.title}</p>
           <p>{this.state.overview}</p>
+          {this.state.availableon.map(item => (
+            
+    
+            <p>availableon {item.display_name}</p>
+          ))}
+          
         </Modal>
 
       </div>
