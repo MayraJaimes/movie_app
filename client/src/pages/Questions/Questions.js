@@ -11,9 +11,9 @@ class Questions extends Component {
   
   //this.props.match.params.location
   componentDidMount() {
-    API.getWeather(this.props.city)
+    API.getWeather(this.props.city.split(",")[0])
       .then(res =>
-        this.setState({ city: (res.data.results)}, () => console.log(this.state.city)))
+        this.setState({ city: (res.data)}, () => console.log(res.data)))
       .catch(err => console.log(err));
   };
 

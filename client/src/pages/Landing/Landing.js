@@ -13,7 +13,7 @@ class Landing extends Component {
           <p className="App-intro">
             Let the weather pick your movie!
           </p>
-          <Link to={"/options/" + "ADD CITY"}>
+          <Link to={"/options"}>
             <button className="btn btn-primary recButton" type="submit">Movie Recommendations</button>
           </Link>
         </div>
