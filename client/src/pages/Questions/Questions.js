@@ -6,14 +6,15 @@ import API from '../../utils/API';
 class Questions extends Component {
   state = {
     weather: '',
-    defaultWeather: 'clear sky'
+    defaultWeather: 'Clear'
   };
 
   componentDidMount() {
     const city = this.props.city.split(',')[0];
-    API.getLocation(city)
+    console.log(city);
+    API.getWeather(city)
       .then(res => {
-        this.setState({ weather: res.data.weather[0].description });
+        this.setState({ weather: res.data.weather[0].main }, () => console.log(res.data.weather[0].main));
       })
       .catch(err => console.log(err));
   }

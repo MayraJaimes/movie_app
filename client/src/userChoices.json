@@ -1,5 +1,5 @@
 {
-  "rainy": [
+  "Rainy": [
     {
       "id": 1,
       "genre": 35,
@@ -16,7 +16,7 @@
       "question": "Let us pick for you."
     }
   ],
-  "clear sky": [
+  "Clear": [
     {
       "id": 4,
       "genre": 10770,
@@ -33,7 +33,7 @@
       "question": "Let us pick for you."
     }
   ],
-  "snow": [
+  "Snow": [
     {
       "id": 7,
       "genre": 28,
@@ -50,7 +50,7 @@
       "question": "Let us pick for you."
     }
   ],
-  "thunderstorms": [
+  "Thunderstorm": [
     {
       "id": 10,
       "genre": 10751,
@@ -67,7 +67,7 @@
       "question": "Let us pick for you."
     }
   ],
-  "fog": [
+  "Fog": [
     {
       "id": 13,
       "genre": 27,
@@ -84,7 +84,7 @@
       "question": "Let us pick for you."
     }
   ],
-  "overcast": [
+  "Overcast": [
     {
       "id": 16,
       "genre": 35,
