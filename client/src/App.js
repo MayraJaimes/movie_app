@@ -47,7 +47,7 @@ return (
         <Route exact path="/" component={Landing} />
         <Route exact path="/signin" component={SignIn} />
         <Route exact path="/signup" component={SignUp} />
-        <Route path="/options" render={() => <Questions userChoices={this.state.userChoices} />} />
+        <Route path="/options/:location" render={() => <Questions userChoices={this.state.userChoices} />} />
         <Route exact path="/movies/:id" component={Movies} />
         <Route component={NotFound} />
       </Switch>

@@ -48,7 +48,7 @@ function getUserCityName(){
 
 
       $.ajax({url: m_queryURL, method: 'GET'}).done(function(response) {
-          $("#cityname").val(response.results[3].formatted_address);
+          $("#cityname").val(response.results[4].formatted_address);
       });
 }
 
