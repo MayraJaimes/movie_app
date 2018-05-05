@@ -6,8 +6,6 @@ let BASEURL = "https://api.themoviedb.org/3/discover/movie?" + APIKEY + "&langua
 var movieUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
 var movieApiKey = "&appid=2445d8326050e0fe7de9752c157367ae";
 
-
-
 export default {
   search: function(genre) {
     var page = Math.floor(Math.random() * 500) + 1;
