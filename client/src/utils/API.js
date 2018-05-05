@@ -3,7 +3,7 @@ import axios from "axios";
 let APIKEY = "api_key=777bd0d9f891f6d2107862225ce02abb";
 let BASEURL = "https://api.themoviedb.org/3/discover/movie?" + APIKEY + "&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=";
 
-var movieUrl = "api.openweathermap.org/data/2.5/weather?q=";
+var movieUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
 var movieApiKey = "2445d8326050e0fe7de9752c157367ae";
 
 export default {
@@ -12,7 +12,7 @@ export default {
     console.log("PAGE", page);
     return axios.get(BASEURL + page + "&with_genres=" + genre);
   },
-  getLocation: function(city) {
+  getWeather: function(city) {
     return axios.get(movieUrl + city + "&APPID=" + movieApiKey);
   }
 };

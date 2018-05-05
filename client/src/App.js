@@ -12,19 +12,20 @@ import userChoices from "./userChoices.json";
 import axios from 'axios';
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { 
-      userChoices: userChoices,
-      currentCity: '',
-      loggedin : false
-    };
+  state = { 
+    userChoices: userChoices,
+    currentCity: '',
+    loggedin : false
+  };
+
+  componentDidMount() {
+    this.checkIfLoggedIn();
   }
 
-  handleCityChange = () => {
+  handleCityChange = (e) => {
     this.setState({
-      currentCity: this.refs.cityname.value
-    }, ()=> {console.log(this.state.currentCity)});
+      currentCity: e.target.value
+    });
   }
 
   checkIfLoggedIn = () => {
@@ -32,10 +33,6 @@ class App extends Component {
           .then(response => {
               this.setState({loggedin: response.data.logged_in})
           });
-  }
-
-  componentWillMount() {
-    this.checkIfLoggedIn();
   }
 
 render() {
@@ -47,7 +44,7 @@ return (
         <Route exact path="/" component={Landing} />
         <Route exact path="/signin" component={SignIn} />
         <Route exact path="/signup" component={SignUp} />
-        <Route path="/options/:location" render={() => <Questions userChoices={this.state.userChoices} />} />
+        <Route path="/options" render={() => <Questions city={this.state.currentCity} userChoices={this.state.userChoices} />} />
         <Route exact path="/movies/:id" component={Movies} />
         <Route component={NotFound} />
       </Switch>

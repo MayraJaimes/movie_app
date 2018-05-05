@@ -4,12 +4,14 @@ import Genre from '../../components/Genre/Genre';
 import API from "../../utils/API";
 
 class Questions extends Component {
-  state = {
-    city: ""
-  };
+  // state = {
+  //   city: "chicago"
+  // };
+
   
+  //this.props.match.params.location
   componentDidMount() {
-    API.getLocation(this.props.match.params.location)
+    API.getWeather(this.props.city)
       .then(res =>
         this.setState({ city: (res.data.results)}, () => console.log(this.state.city)))
       .catch(err => console.log(err));
