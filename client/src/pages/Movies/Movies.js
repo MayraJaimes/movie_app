@@ -34,8 +34,12 @@ class Movies extends Component {
       .header("X-Mashape-Key", "yuFDFvrP7zmsh3waefRbZZyBHWK4p1i7GhOjsnN5TY3aszxBBO")
       .header("Accept", "application/json")
       .end(function (result) {
-        this.setState({availableon: result.body.results[0].locations})
-        console.log(result.body.results[0].locations);
+        if(result && result.body && result.body.results[0] && result.body.results[0].locations) {
+          var availableon = result.body.results[0].locations;
+          if (availableon) this.setState({ availableon: availableon })
+        } else {
+          this.setState({availableon:[]})
+        }
       }.bind(this)); 
   };
 
@@ -56,13 +60,9 @@ class Movies extends Component {
             <ListWrapper>
             {this.state.movies.map(movie => (
               <ListItem key={movie.id}>
-                  {/* <Link onClick={this.showModal}> */}
-                {/* <Link to={"/movie/" + movie.id}> */}
                   <a onClick={() => this.showModal(movie.title, movie.overview)} data-target="#movieModal" data-toggle="modal" href="#movieModal">
-
                   <img className="card-img-top" alt={movie.title} src={"https://image.tmdb.org/t/p/w600_and_h900_bestv2" + movie.poster_path}/>
                   </a>
-                {/* </Link> */}
               </ListItem>
             ))}
             </ListWrapper>
@@ -74,9 +74,7 @@ class Movies extends Component {
           <p>{this.state.title}</p>
           <p>{this.state.overview}</p>
           {this.state.availableon.map(item => (
-            
-    
-            <p>availableon {item.display_name}</p>
+              <p>availableon {item.display_name}</p>
           ))}
           
         </Modal>
