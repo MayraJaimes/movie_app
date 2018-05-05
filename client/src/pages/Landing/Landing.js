@@ -14,13 +14,12 @@ class Landing extends Component {
             Let the weather pick your movie!
           </p>
           <Link to={"/options"}>
-
-          <button className="btn btn-primary recButton" type="submit">Movie Recommendations</button>
+            <button className="btn btn-primary recButton" type="submit">Movie Recommendations</button>
           </Link>
         </div>
         </Main>
 
-        < Footer />
+        <Footer />
       </div>
     );
   }

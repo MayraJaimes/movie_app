@@ -1,111 +1,104 @@
-[
-  {
-    "id": 1,
-    "weather": "rainy",
-    "genre": 35,
-    "question": "Need a pick me up?"
-  },
-  {
-    "id": 2,
-    "weather": "rainy",
-    "genre": 18,
-    "question": "I'd rather wallow in my sadness."
-  },
-  {
-    "id": 3,
-    "weather": "rainy",
-    "genre": 10749,
-    "question": "Let us pick for you."
-  },
-  {
-    "id": 4,
-    "weather": "clear",
-    "genre": 10770,
-    "question": "Are you sure don't want to go outside?"
-  },
-  {
-    "id": 5,
-    "weather": "clear",
-    "genre": 12,
-    "question": "I'm in the mood for an adventure (just not outside)!"
-  },
-  {
-    "id": 6,
-    "weather": "clear",
-    "genre": 16,
-    "question": "Let us pick for you."
-  },
-  {
-    "id": 7,
-    "weather": "snow",
-    "genre": 28,
-    "question": "I love the snow!"
-  },
-  {
-    "id": 8,
-    "weather": "snow",
-    "genre": 35,
-    "question": "I'm totally over winter."
-  },
-  {
-    "id": 9,
-    "weather": "snow",
-    "genre": 99,
-    "question": "Let us pick for you."
-  },
-  {
-    "id": 10,
-    "weather": "thunderstorms",
-    "genre": 10751,
-    "question": "I'm a wuss!"
-  },
-  {
-    "id": 11,
-    "weather": "thunderstorms",
-    "genre": 27,
-    "question": "I wanna be scurred!"
-  },
-  {
-    "id": 12,
-    "weather": "thunderstorms",
-    "genre": 14,
-    "question": "Let us pick for you."
-  },
-  {
-    "id": 13,
-    "weather": "fog",
-    "genre": 27,
-    "question": "Looks spooky out..."
-  },
-  {
-    "id": 14,
-    "weather": "fog",
-    "genre": 878,
-    "question": "Great day for Sci-Fi."
-  },
-  {
-    "id": 15,
-    "weather": "fog",
-    "genre": 10749,
-    "question": "Let us pick for you."
-  },
-  {
-    "id": 16,
-    "weather": "overcast",
-    "genre": 35,
-    "question": "Ugh, it's so gross outside."
-  },
-  {
-    "id": 17,
-    "weather": "overcast",
-    "genre": 18,
-    "question": "Someone get the ice cream."
-  },
-  {
-    "id": 18,
-    "weather": "overcast",
-    "genre": 10749,
-    "question": "Let us pick for you."
-  }
-  
-]
+{
+  "Rainy": [
+    {
+      "id": 1,
+      "genre": 35,
+      "question": "Need a pick me up?"
+    },
+    {
+      "id": 2,
+      "genre": 18,
+      "question": "I'd rather wallow in my sadness."
+    },
+    {
+      "id": 3,
+      "genre": 10749,
+      "question": "Let us pick for you."
+    }
+  ],
+  "Clear": [
+    {
+      "id": 4,
+      "genre": 10770,
+      "question": "Are you sure don't want to go outside?"
+    },
+    {
+      "id": 5,
+      "genre": 12,
+      "question": "I'm in the mood for an adventure (just not outside)!"
+    },
+    {
+      "id": 6,
+      "genre": 16,
+      "question": "Let us pick for you."
+    }
+  ],
+  "Snow": [
+    {
+      "id": 7,
+      "genre": 28,
+      "question": "I love the snow!"
+    },
+    {
+      "id": 8,
+      "genre": 35,
+      "question": "I'm totally over winter."
+    },
+    {
+      "id": 9,
+      "genre": 99,
+      "question": "Let us pick for you."
+    }
+  ],
+  "Thunderstorm": [
+    {
+      "id": 10,
+      "genre": 10751,
+      "question": "I'm a wuss!"
+    },
+    {
+      "id": 11,
+      "genre": 27,
+      "question": "I wanna be scurred!"
+    },
+    {
+      "id": 12,
+      "genre": 14,
+      "question": "Let us pick for you."
+    }
+  ],
+  "Fog": [
+    {
+      "id": 13,
+      "genre": 27,
+      "question": "Looks spooky out..."
+    },
+    {
+      "id": 14,
+      "genre": 878,
+      "question": "Great day for Sci-Fi."
+    },
+    {
+      "id": 15,
+      "genre": 10749,
+      "question": "Let us pick for you."
+    }
+  ],
+  "Overcast": [
+    {
+      "id": 16,
+      "genre": 35,
+      "question": "Ugh, it's so gross outside."
+    },
+    {
+      "id": 17,
+      "genre": 18,
+      "question": "Someone get the ice cream."
+    },
+    {
+      "id": 18,
+      "genre": 10749,
+      "question": "Let us pick for you."
+    }
+  ]
+}
