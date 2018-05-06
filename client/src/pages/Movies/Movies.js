@@ -7,7 +7,7 @@ import './Movies.css';
 import ListWrapper from "../../components/ListWrapper";
 import Modal from "../../components/Modal";
 import unirest from "unirest";
-var keys = require("../../utils/keys.js");
+
 
 class Movies extends Component {
   state = {
@@ -32,8 +32,7 @@ class Movies extends Component {
     this.setState({title: title});
     this.setState({overview : overview});
     unirest.get("https://utelly-tv-shows-and-movies-availability-v1.p.mashape.com/lookup?country=us&term=" + title)
-      // .header("X-Mashape-Key", "yuFDFvrP7zmsh3waefRbZZyBHWK4p1i7GhOjsnN5TY3aszxBBO")
-      .header("X-Mashape-Key", keys.utellyApi)
+      .header("X-Mashape-Key", process.env.REACT_APP_UTELLY_API_KEY)
       .header("Accept", "application/json")
       .end(function (result) {
         if(result && result.body && result.body.results[0] && result.body.results[0].locations) {
