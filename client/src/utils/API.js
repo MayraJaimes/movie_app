@@ -1,10 +1,13 @@
 import axios from "axios";
+
 var keys = require("./keys.js");
+
 
 // let APIKEY = "api_key=777bd0d9f891f6d2107862225ce02abb";
 let APIKEY = keys.movieApi;
+console.log(APIKEY);
 
-let BASEURL = "https://api.themoviedb.org/3/discover/movie?" + APIKEY + "&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=";
+let BASEURL = "https://api.themoviedb.org/3/discover/movie?api_key=" + APIKEY + "&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=";
 
 
 //SHOULD THESE BE NAMED WEATHER INSTEAD OF MOVIE?
