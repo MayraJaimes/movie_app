@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Genre from '../../components/Genre/Genre';
 import API from '../../utils/API';
-import Main from "../../components/Main/Main"
-import Footer from "../../components/Footer/Footer"
+import Main from '../../components/Main/Main';
+import Footer from '../../components/Footer/Footer';
+
 
 class Questions extends Component {
   state = {
@@ -27,7 +28,6 @@ class Questions extends Component {
       : this.props.userChoices[this.state.defaultWeather];
 
     return (
-      
       <li>
         {userQs.map(userChoice => (
           //if statement only getting those related to that weather name! if not set to default
@@ -40,7 +40,6 @@ class Questions extends Component {
           </Link>
         ))}
       </li>
-
     );
   }
 }

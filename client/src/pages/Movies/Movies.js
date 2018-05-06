@@ -74,7 +74,7 @@ class Movies extends Component {
           <p>{this.state.title}</p>
           <p>{this.state.overview}</p>
           {this.state.availableon.map(item => (
-              <p>availableon {item.display_name}</p>
+              <p>Available On: {item.display_name}</p>
           ))}
           
         </Modal>
