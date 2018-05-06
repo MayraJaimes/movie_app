@@ -1,10 +1,16 @@
 import axios from "axios";
+var keys = require("./keys.js")
 
-let APIKEY = "api_key=777bd0d9f891f6d2107862225ce02abb";
+// let APIKEY = "api_key=777bd0d9f891f6d2107862225ce02abb";
+let APIKEY = keys.movieApiKey;
+
 let BASEURL = "https://api.themoviedb.org/3/discover/movie?" + APIKEY + "&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=";
 
+
+//SHOULD THESE BE NAMED WEATHER INSTEAD OF MOVIE?
 var movieUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
-var movieApiKey = "&appid=2445d8326050e0fe7de9752c157367ae";
+// var movieApiKey = "&appid=2445d8326050e0fe7de9752c157367ae";
+var movieApiKey = keys.weatherApi;
 
 export default {
   search: function(genre) {
