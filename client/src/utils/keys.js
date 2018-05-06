@@ -1,8 +1,8 @@
-console.log("keys are loaded")
-require("dotenv").config();
-var movieApi = process.env.REACT_APP_MOVIE_API_KEY;
+// console.log("keys are loaded")
+// require("dotenv").config();
+// var movieApi = process.env.REACT_APP_MOVIE_API_KEY;
 
-export default movieApi;
+// export default movieApi;
 
 // console.log("keys" + movieApi)
 
@@ -25,6 +25,7 @@ export default movieApi;
 //     utellyApi: process.env.UTELLY_API_KEY,
 //     weatherApi: process.env.WEATHER_API_KEY
 // }
+
 
 
 
