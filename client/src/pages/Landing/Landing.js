@@ -11,10 +11,13 @@ class Landing extends Component {
       <Main>
         <div className="container">
           <p className="App-intro">
-            Let the weather pick your movie!
+            Let the Weather Pick Your Movie!
+          </p>
+          <p className="intro">
+            Film Forecast recommends movies based on the current weather.<br /> Eliminate all the time wasted trying to pick what to watch!
           </p>
           <Link to={"/options"}>
-            <button className="btn btn-primary recButton" type="submit">Movie Recommendations</button>
+            <button className="btn btn-primary btn-lg recButton" type="submit">Check the Weather</button>
           </Link>
         </div>
         </Main>

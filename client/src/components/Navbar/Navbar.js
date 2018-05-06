@@ -51,7 +51,7 @@ class Navbar extends React.Component {
       </Link>
       <Link to={"/signup"}>
         <button className="btn btn-primary signUp" type="submit">
-          Sign Up
+          Create Account
         </button>
       </Link>
     </form>
