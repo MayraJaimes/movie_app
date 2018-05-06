@@ -7,7 +7,7 @@ import './Movies.css';
 import ListWrapper from "../../components/ListWrapper";
 import Modal from "../../components/Modal";
 import unirest from "unirest";
-var keys = require("./keys.js");
+var keys = require("../../utils/keys.js");
 
 class Movies extends Component {
   state = {
