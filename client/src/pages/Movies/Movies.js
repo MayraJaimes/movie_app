@@ -33,7 +33,7 @@ class Movies extends Component {
     this.setState({overview : overview});
     unirest.get("https://utelly-tv-shows-and-movies-availability-v1.p.mashape.com/lookup?country=us&term=" + title)
       // .header("X-Mashape-Key", "yuFDFvrP7zmsh3waefRbZZyBHWK4p1i7GhOjsnN5TY3aszxBBO")
-      .header("X-Mashape-Key", keys.utellyApiKey)
+      .header("X-Mashape-Key", keys.utellyApi)
       .header("Accept", "application/json")
       .end(function (result) {
         if(result && result.body && result.body.results[0] && result.body.results[0].locations) {
