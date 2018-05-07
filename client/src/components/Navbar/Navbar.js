@@ -18,7 +18,6 @@ class Navbar extends React.Component {
     render() {
       if (this.props.loggedIn) {
         return <nav className="navbar navbar-fixed-top col-md-12">
-          {/* logo should go here, needs to be chosen or created */}
           <Link to={"/"}
             className="navbar-brand"><img className="img-responsive logo" src="./assets/images/FC-logo-white.png" alt="Film Forecast"/>
           </Link>
@@ -32,7 +31,6 @@ class Navbar extends React.Component {
         }else {
         return(
     <nav className="navbar navbar-fixed-top col-md-12">
-    {/* logo should go here, needs to be chosen or created */}
     <Link to={"/"} className="navbar-brand"><img className="img-responsive logo" src="./assets/images/FC-logo-white.png" alt="Film Forecast"/>
     </Link>
     <input

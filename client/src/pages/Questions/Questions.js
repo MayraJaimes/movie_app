@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Genre from '../../components/Genre/Genre';
 import API from '../../utils/API';
-import Main from '../../components/Main/Main';
-import Footer from '../../components/Footer/Footer';
+
 
 
 class Questions extends Component {

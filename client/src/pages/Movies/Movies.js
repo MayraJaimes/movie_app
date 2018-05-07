@@ -113,7 +113,7 @@ export default Movies;
         // </Modal>
 
 
-{/* <a onClick={this.toggleModal} data-toggle="modal" data-target="#movieModal" data-toggle="modal" href="#movieModal"> */}
+/* <a onClick={this.toggleModal} data-toggle="modal" data-target="#movieModal" data-toggle="modal" href="#movieModal"> */
 
 // toggleModal = (title, overview) => {
 //   this.setState({ isOpen: !this.state.isOpen });
