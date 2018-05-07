@@ -9,6 +9,7 @@ class Landing extends Component {
       <div className="App">
       <Main>
         <div className="container">
+          <img className="fc-icon text-center" src="./assets/images/FC-icon-white.png" />
           <p className="App-intro">
             Let the Weather Pick Your Movie!
           </p>

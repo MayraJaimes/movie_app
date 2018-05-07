@@ -5,7 +5,9 @@ class Genre extends Component {
   
   render() {
     return (
-      <button className="btn btn-primary questions">{this.props.question}</button>
+      // <button className="btn btn-primary btn-block questions">
+      <span>{this.props.question}</span>
+      //</button>
     );
   }
 }

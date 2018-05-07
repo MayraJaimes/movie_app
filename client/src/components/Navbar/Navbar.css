@@ -17,7 +17,7 @@
     font-family: "Roboto Condensed", sans-serif;
 }
 
-.btn:hover, .btn:active, .btn:visited, .btn:focus {
+.btn:hover, .btn:active, .btn:focus {
     background-color: #f0308d;
     border: 1px solid transparent;
     color: #FFEEDB;
