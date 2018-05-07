@@ -21,8 +21,6 @@ class Landing extends Component {
           </Link>
         </div>
         </Main>
-
-        <Footer />
       </div>
     );
   }

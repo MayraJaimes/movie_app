@@ -37,7 +37,7 @@ class SignUp extends Component {
   render(){
   return <div class="form-signup" name="signup">
       <center>
-        <h2 class="form-signup-heading">Sign Up!</h2>
+        <h2 class="form-signup-heading">Create Account</h2>
       </center>
       <input type="email" className="form-control" ref="signupemail" name="email" placeholder="Email Address" required autoFocus />
       <input type="text" className="form-control" ref="signupfirstname" name="firstname" placeholder="First Name" required/>

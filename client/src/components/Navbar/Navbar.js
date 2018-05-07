@@ -20,7 +20,7 @@ class Navbar extends React.Component {
         return <nav className="navbar navbar-fixed-top col-md-12">
           {/* logo should go here, needs to be chosen or created */}
           <Link to={"/"}
-            className="navbar-brand">Film Forecast
+            className="navbar-brand"><img className="img-responsive logo" src="./assets/images/FC-logo-white.png" alt="Film Forecast"/>
           </Link>
           <input type="text" name="cityname" ref="cityname" id="cityname" placeholder="City Name" onChange={this.props.onChange} />
           <form className="form-inline">
@@ -33,7 +33,7 @@ class Navbar extends React.Component {
         return(
     <nav className="navbar navbar-fixed-top col-md-12">
     {/* logo should go here, needs to be chosen or created */}
-    <Link to={"/"} className="navbar-brand">Film Forecast
+    <Link to={"/"} className="navbar-brand"><img className="img-responsive logo" src="./assets/images/FC-logo-white.png" alt="Film Forecast"/>
     </Link>
     <input
       type="text"
