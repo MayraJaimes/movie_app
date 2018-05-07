@@ -10,8 +10,8 @@ return (
     <div className={showHideClassName} id="movieModal" data-target="movieModal">
         <section className="modal-main">
             {children}
-            <button className="modalbtn" onClick={handleClose}>close</button>
-            <button className="modalbtn" onClick={saveMovie}>save</button>
+            <button className="btn btn-primary" onClick={handleClose}>close</button>
+            <button className="btn btn-primary" onClick={saveMovie}>save</button>
         </section>
 
 
