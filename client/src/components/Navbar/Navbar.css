@@ -1,6 +1,5 @@
-.navbar {
-    background-color: #525067;
-    box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+.logo {
+    max-width: 300px;
 }
 
 .navbar-brand {
@@ -8,27 +7,23 @@
 }
 
 .btn {
-    background-color: #3d6387;
-    border-style: none;
+    background-color: #bf2470;
+    border: 1px solid transparent;
     margin: 0 10px;
     color: #FFEEDB;
-    box-shadow: 0 14px 28px rgba(0,0,0,.25);
+    box-shadow: 0 2px 6px rgba(0,0,0,.25);
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
-.btn:hover {
-    background-color: #508AC0;
-    border-style: none;
+.btn:hover, .btn:active, .btn:focus {
+    background-color: #f0308d;
+    border: 1px solid transparent;
     color: #FFEEDB;
 }
 
-.btn:active {
-    background-color: #508AC0;
-    border-style: none;
-    color: #FFEEDB;
-}
-
-.btn:visited {
-    background-color: #508AC0;
-    border-style: none;
-    color: #FFEEDB;
+.signUp {
+    border: 1px solid white;
+    background-color: transparent;
 }

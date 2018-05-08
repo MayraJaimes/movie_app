@@ -7,6 +7,7 @@ import './Movies.css';
 import ListWrapper from "../../components/ListWrapper";
 import Modal from "../../components/Modal";
 import unirest from "unirest";
+import axios from 'axios';
 
 class Movies extends Component {
   state = {
@@ -31,7 +32,7 @@ class Movies extends Component {
     this.setState({title: title});
     this.setState({overview : overview});
     unirest.get("https://utelly-tv-shows-and-movies-availability-v1.p.mashape.com/lookup?country=us&term=" + title)
-      .header("X-Mashape-Key", "yuFDFvrP7zmsh3waefRbZZyBHWK4p1i7GhOjsnN5TY3aszxBBO")
+      .header("X-Mashape-Key", process.env.REACT_APP_UTELLY_API_KEY)
       .header("Accept", "application/json")
       .end(function (result) {
         if(result && result.body && result.body.results[0] && result.body.results[0].locations) {
@@ -48,6 +49,19 @@ class Movies extends Component {
   };
   saveMovie = () => {
     //code here to save title to database.
+
+    axios
+      .post("/savemovie", {
+        name: this.state.title,
+        desc: this.state.overview
+      })
+      .then(function(response) {
+        alert('Movie was saved successfully')
+      })
+      .catch(function(error) {
+        alert('Please sign in first to save movies.')
+      });
+
   }
 
 
@@ -71,10 +85,13 @@ class Movies extends Component {
         <h3>No Results to Display</h3>
         )}
         <Modal show={this.state.show} handleClose={this.hideModal} saveMovie={this.saveMovie}>
-          <p>{this.state.title}</p>
-          <p>{this.state.overview}</p>
+          <p className="movie-title">{this.state.title}</p>
+          <p className="movie-overview">{this.state.overview}</p>
           {this.state.availableon.map(item => (
-              <p>availableon {item.display_name}</p>
+            <div>
+            <p><strong>Available On:</strong></p>
+            <p>{item.display_name}</p>
+            </div>
           ))}
           
         </Modal>
@@ -113,7 +130,7 @@ export default Movies;
         // </Modal>
 
 
-{/* <a onClick={this.toggleModal} data-toggle="modal" data-target="#movieModal" data-toggle="modal" href="#movieModal"> */}
+/* <a onClick={this.toggleModal} data-toggle="modal" data-target="#movieModal" data-toggle="modal" href="#movieModal"> */
 
 // toggleModal = (title, overview) => {
 //   this.setState({ isOpen: !this.state.isOpen });

@@ -36,6 +36,20 @@ var passport = require("../../config/passport");
     }
   });
 
+// route for saving movie to database
+router.post('/savemovie' , (req,res)=>{
+    email = req.user.email || 'unknown';
+    var movieData = {name:req.body.name,desc:req.body.desc};
+    db.User.findOneAndUpdate({'email':email},{$push:{movies: movieData}}, {new:true})
+      .then(movie => {
+        res.status(200).json(movie);
+      })
+      .catch(err => {
+        res.status(400).json("{'status':'not added'}");
+      });
+});
+
+
   // Route for logging user out
   router.get("/logout", function (req, res) {
     req.logout();
