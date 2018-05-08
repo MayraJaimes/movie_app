@@ -20,7 +20,7 @@ class Navbar extends React.Component {
         return <nav className="navbar navbar-fixed-top col-md-12">
           <Link to={"/"}
             className="navbar-brand"><img className="img-responsive logo" src="./assets/images/FC-logo-white.png" alt="Film Forecast"/>
-          </Link>
+          
           <input type="text" name="cityname" ref="cityname" id="cityname" placeholder="City Name" onChange={this.props.onChange} />
           <form className="form-inline">
             <button className="btn btn-primary signUp" type="submit" onClick={this.logoutUser}>
@@ -31,8 +31,9 @@ class Navbar extends React.Component {
         }else {
         return(
     <nav className="navbar navbar-fixed-top col-md-12">
+
     <Link to={"/"} className="navbar-brand"><img className="img-responsive logo" src="./assets/images/FC-logo-white.png" alt="Film Forecast"/>
-    </Link>
+
     <input
       type="text"
       name="cityname"

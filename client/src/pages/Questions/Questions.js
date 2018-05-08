@@ -26,10 +26,14 @@ class Questions extends Component {
       : this.props.userChoices[this.state.defaultWeather];
 
     return (
+
       <div className="genre-btn-container">
         {userQs.map(userChoice => (
           //if statement only getting those related to that weather name! if not set to default
           <Link to={'/movies/' + userChoice.genre} className="btn btn-primary btn-block">
+
+      
+
             {<Genre
               question={userChoice.question}
               key={userChoice.id}
@@ -37,7 +41,10 @@ class Questions extends Component {
             />}
           </Link>
         ))}
+
       </div>
+
+
     );
   }
 }
