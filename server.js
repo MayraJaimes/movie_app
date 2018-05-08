@@ -7,11 +7,19 @@ var session = require('express-session');
 var passport = require("./config/passport");
 var app = express();
 var PORT = process.env.PORT || 3001;
+const path = require("path");
 
 mongoose.Promise = global.Promise;
 
 //Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/movieapp");
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/movieapp");
+var databaseUri = "mongodb://localhost/movieapp";
+
+if (process.env.MONGODB_URI) {
+  mongoose.connect(process.env.MONGODB_URI);
+}else {
+  mongoose.connect(databaseUri);
+}
 
 // setting up middleware to serve static files
 if(process.env.NODE_ENV==='production'){
@@ -37,6 +45,10 @@ app.use(routes);
 // console.log(result.body.results[0].locations);
 // });
 
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 // Start the API server
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
