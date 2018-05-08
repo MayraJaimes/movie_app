@@ -23,6 +23,9 @@
     },
     "/current_user": {
       "target": "http://localhost:3001"
+    },
+    "/savemovie": {
+      "target": "http://localhost:3001"
     }
   },
   "scripts": {
