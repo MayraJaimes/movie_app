@@ -27,6 +27,7 @@ class Navbar extends React.Component {
               Logout
             </button>
           </form>
+          </Link>
         </nav>;
         }else {
         return(
@@ -54,6 +55,7 @@ class Navbar extends React.Component {
         </button>
       </Link>
     </form>
+    </Link>
   </nav>
         );
     }
