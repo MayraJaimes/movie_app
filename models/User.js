@@ -3,6 +3,15 @@ var bcrypt = require("bcrypt-nodejs");
 let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
+let movieSchema = new Schema({
+    name : {
+        type: String
+    },
+    desc : {
+        type: String
+    }
+});
+
 // defining the User schema
 let userSchema = new Schema({
     email: {
@@ -18,7 +27,8 @@ let userSchema = new Schema({
     },
     lastname: {
         type: String
-    }
+    },
+    movies: [movieSchema]
 });
 
 userSchema.pre("save", function(next) {

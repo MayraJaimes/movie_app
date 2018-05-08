@@ -7,7 +7,7 @@ import './Movies.css';
 import ListWrapper from "../../components/ListWrapper";
 import Modal from "../../components/Modal";
 import unirest from "unirest";
-
+import axios from 'axios';
 
 class Movies extends Component {
   state = {
@@ -49,6 +49,19 @@ class Movies extends Component {
   };
   saveMovie = () => {
     //code here to save title to database.
+
+    axios
+      .post("/savemovie", {
+        name: this.state.title,
+        desc: this.state.overview
+      })
+      .then(function(response) {
+        alert('Movie was saved successfully')
+      })
+      .catch(function(error) {
+        alert('Please sign in first to save movies.')
+      });
+
   }
 
 
