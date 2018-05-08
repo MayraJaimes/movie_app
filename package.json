@@ -9,6 +9,9 @@
     "both": "concurrently \"nodemon start\" \"npm run start --prefix client\"",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
+  "engines": {
+    "node": "8.9.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MayraJaimes/movie_app.git"
