@@ -1,5 +1,5 @@
 {
-  "Rainy": [
+  "Rain": [
     {
       "id": 1,
       "genre": 35,
@@ -84,7 +84,7 @@
       "question": "Let us pick for you."
     }
   ],
-  "Overcast": [
+  "Clouds": [
     {
       "id": 16,
       "genre": 35,
