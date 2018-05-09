@@ -11,7 +11,7 @@ var movieApiKey = process.env.REACT_APP_WEATHER_API_KEY;
 
 export default {
   search: function(genre) {
-    var page = Math.floor(Math.random() * 500) + 1;
+    var page = Math.floor(Math.random() * 20) + 1;
     console.log("PAGE", page);
     return axios.get(BASEURL + page + "&with_genres=" + genre);
   },
