@@ -15,7 +15,7 @@ class Questions extends Component {
     console.log(city);
     API.getWeather(city)
       .then(res => {
-        this.setState({ weather: res.data.weather[0].main }, () => console.log(res.data.weather[0].main));
+        this.setState({ weather: res.data.weather[0].main }, () => console.log(res.data));
       })
       .catch(err => console.log(err));
   }
@@ -26,23 +26,28 @@ class Questions extends Component {
       : this.props.userChoices[this.state.defaultWeather];
 
     return (
+      <div>
+        <div className="weather-container">
+          <img className="weather-display" src={`./assets/images/${this.state.weather}.svg`} />
+ 
+        </div>
 
-      <div className="genre-btn-container">
-        {userQs.map(userChoice => (
-          //if statement only getting those related to that weather name! if not set to default
-          <Link to={'/movies/' + userChoice.genre} className="btn btn-primary btn-block">
+        <div className="genre-btn-container">
+          {userQs.map(userChoice => (
+            //if statement only getting those related to that weather name! if not set to default
+            <Link to={'/movies/' + userChoice.genre} className="btn btn-primary btn-block">
 
-      
+              {<Genre
+                question={userChoice.question}
+                key={userChoice.id}
+                genre={userChoice.genre}
+              />}
+            </Link>
+          ))}
 
-            {<Genre
-              question={userChoice.question}
-              key={userChoice.id}
-              genre={userChoice.genre}
-            />}
-          </Link>
-        ))}
-
+        </div>
       </div>
+
 
 
     );
