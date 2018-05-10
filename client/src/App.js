@@ -45,6 +45,7 @@ return (
         <Route exact path="/" render={() => <Landing onChange={this.handleCityChange} />} />
            <Route exact path="/signin" component={SignIn} />
            <Route exact path="/signup" component={SignUp} />
+           <Route exact path='/watchlist' component={WatchList} />
            <Route path="/options" render={() => <Questions city={this.state.currentCity} userChoices={this.state.userChoices} />} />
            <Route exact path="/movies/:id" component={Movies} />
            <Route component={NotFound} />
