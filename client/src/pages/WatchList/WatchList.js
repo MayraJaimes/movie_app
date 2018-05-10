@@ -23,6 +23,7 @@ class WatchList extends Component {
     render() {
         return (
             <div>
+                <hr />
                 <h1>Watch List</h1>
                 <hr/>
                 {
