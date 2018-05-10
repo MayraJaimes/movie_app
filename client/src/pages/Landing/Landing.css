@@ -47,7 +47,32 @@ body {
 }
 
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.cityField {
+  background: none;
+  border: 1px solid transparent;
+  border-bottom: 1px solid white;
+  padding: 5px 10px;
+  display: block;
+  margin: 0 auto 20px auto;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0,0,0,.9);
+  text-align: center;
+}
+.cityField:focus,
+.cityField:active {
+  border: 1px solid #bf4470;
+  outline: none;
+}
+.cityField::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+.cityField:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+.cityField::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+}
+.btn.recButton {
+  margin-bottom: 30px;
 }
