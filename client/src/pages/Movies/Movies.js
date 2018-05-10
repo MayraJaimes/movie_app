@@ -84,16 +84,19 @@ class Movies extends Component {
         ) : (
         <h3>No Results to Display</h3>
         )}
-        <Modal show={this.state.show} handleClose={this.hideModal} saveMovie={this.saveMovie}>
+        <Modal key={this.state.id} show={this.state.show} handleClose={this.hideModal} saveMovie={this.saveMovie}>
           <p className="movie-title">{this.state.title}</p>
           <p className="movie-overview">{this.state.overview}</p>
           {this.state.availableon.map(item => (
-            <div>
-            <p><strong>Available On:</strong></p>
-            <p>{item.display_name}</p>
+            <div key={item.display_name}>
+              {console.log(this.state.availableon)}
+              <div id={item.name}><img className="utellyIcon" src={item.icon} alt="utellyIcon"></img></div>
+              <div><a href={item.url} target="_blank">Watch on {item.display_name}</a></div>
+              <p></p>
             </div>
+
           ))}
-          
+
         </Modal>
 
       </div>

@@ -42,13 +42,12 @@ return (
     <div>
       <Navbar onChange={this.handleCityChange} loggedIn={this.state.loggedin} />
       <Switch>
-        <Route exact path="/" component={Landing} />
-        <Route exact path="/signin" component={SignIn} />
-        <Route exact path="/signup" component={SignUp} />
-        <Route exact path='/watchlist' component={WatchList} />
-        <Route path="/options" render={() => <Questions city={this.state.currentCity} userChoices={this.state.userChoices} />} />
-        <Route exact path="/movies/:id" component={Movies} />
-        <Route component={NotFound} />
+        <Route exact path="/" render={() => <Landing onChange={this.handleCityChange} />} />
+           <Route exact path="/signin" component={SignIn} />
+           <Route exact path="/signup" component={SignUp} />
+           <Route path="/options" render={() => <Questions city={this.state.currentCity} userChoices={this.state.userChoices} />} />
+           <Route exact path="/movies/:id" component={Movies} />
+           <Route component={NotFound} />
       </Switch>
     </div>
   </Router>
