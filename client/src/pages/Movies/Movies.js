@@ -82,7 +82,7 @@ class Movies extends Component {
             </ListWrapper>
           </List>
         ) : (
-        <h3>No Results to Display</h3>
+          <h1>Movies Recommended</h1>
         )}
         <Modal key={this.state.id} show={this.state.show} handleClose={this.hideModal} saveMovie={this.saveMovie}>
           <p className="movie-title">{this.state.title}</p>
