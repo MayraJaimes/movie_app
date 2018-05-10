@@ -21,14 +21,22 @@ class Questions extends Component {
   }
 
   render() {
-    const userQs = this.props.userChoices[this.state.weather]
-      ? this.props.userChoices[this.state.weather]
-      : this.props.userChoices[this.state.defaultWeather];
+    let icon;
+    let userQs;
+
+      if (this.props.userChoices[this.state.weather]){
+        userQs = this.props.userChoices[this.state.weather]
+        icon = this.state.weather
+      }
+      else {
+        userQs = this.props.userChoices[this.state.defaultWeather]
+        icon = this.state.defaultWeather
+      }
 
     return (
       <div>
         <div className="weather-container">
-          <img className="weather-display" src={`./assets/images/${this.state.weather}.svg`} />
+          <img className="weather-display" src={`./assets/images/${icon}.png`} />
         </div>
 
         <div className="genre-btn-container">
