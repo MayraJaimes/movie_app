@@ -29,7 +29,6 @@ class Questions extends Component {
       <div>
         <div className="weather-container">
           <img className="weather-display" src={`./assets/images/${this.state.weather}.svg`} />
- 
         </div>
 
         <div className="genre-btn-container">
