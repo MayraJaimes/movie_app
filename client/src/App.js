@@ -7,6 +7,7 @@ import Movies from "./pages/Movies/Movies";
 import NotFound from "./pages/NotFound/NotFound";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
+import WatchList from "./pages/WatchList/WatchList";
 import Navbar from './components/Navbar/Navbar';
 import userChoices from "./userChoices.json";
 import axios from 'axios';
@@ -44,6 +45,7 @@ return (
         <Route exact path="/" component={Landing} />
         <Route exact path="/signin" component={SignIn} />
         <Route exact path="/signup" component={SignUp} />
+        <Route exact path='/watchlist' component={WatchList} />
         <Route path="/options" render={() => <Questions city={this.state.currentCity} userChoices={this.state.userChoices} />} />
         <Route exact path="/movies/:id" component={Movies} />
         <Route component={NotFound} />

@@ -36,6 +36,20 @@ var passport = require("../../config/passport");
     }
   });
 
+  // route for getting saved movies
+router.get('/getsavedmovies' , (req , res)=>{
+    if (req.user) {
+    db.User.findOne({'email': req.user.email} , 'movies')
+      .populate('movies')
+      .then(movies=>{
+          res.status(200).json(movies);
+      })
+      .catch(err=>{
+          res.status(400).json("{'status':'error'}");
+      });
+    }
+});
+
 // route for saving movie to database
 router.post('/savemovie' , (req,res)=>{
     email = req.user.email || 'unknown';

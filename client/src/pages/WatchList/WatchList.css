@@ -1,0 +1,39 @@
+.movieImage {
+  width: 200px;
+  height: 250px;
+  display: inline-block;
+}
+
+h1, h3, h5, h6 {
+  text-align: center;
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 10px;
+  text-shadow: 0 2px 6px rgba(0,0,0,.9);
+  margin-left: 5px;
+  margin-right: 5px;
+  line-height: 1.5rem;
+}
+
+h5 {
+  color: darksalmon;
+}
+
+.movie-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.savedmovies {
+  background-color: #333333;
+  border: 1px solid black;
+  border-radius : 5px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+
+.movie-overview  {
+  font-family: 'Montserrat', sans-serif;
+}
