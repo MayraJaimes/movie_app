@@ -13,13 +13,26 @@ class WatchList extends Component {
     }
 
     componentDidMount() {
-
+        axios.get('/getsavedmovies')
+             .then(response => {
+                this.setState({movies: response.data.movies});
+                console.log(response.data.movies)
+             });
     }
     
     render() {
         return (
             <div>
                 <h1>Watch List</h1>
+                <hr/>
+                {
+                  this.state.movies.map(movie => {
+                      return (<div className='savedmovies'>
+                          <h5> {movie.name} </h5>
+                          <h6> {movie.desc} </h6>
+                      </div>)
+                  })  
+                }
             </div>
         )
     }

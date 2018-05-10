@@ -25,6 +25,9 @@
     },
     "/savemovie": {
       "target": "http://localhost:3001"
+    },
+    "/getsavedmovies": {
+      "target": "http://localhost:3001"
     }
   },
   "scripts": {
