@@ -27,3 +27,15 @@
     border: 1px solid white;
     background-color: transparent;
 }
+@media (max-width: 605px) {
+  .navbar-brand {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin: 10px;
+  }
+  .navbar .form-inline {
+      width: 260px;
+      margin: 0 auto;
+  }
+}
