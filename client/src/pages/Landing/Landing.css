@@ -1,18 +1,17 @@
 .App {
   text-align: center;
-  
 }
 
 body {
   background-image: url(/assets/images/clouds.jpg);
   background-size: cover;
+  height: 100vh;
 }
 
 .fc-icon {
   width: 150px;
   margin: 100px auto 10px auto;
 }
-
 
 .App-header {
   background-color: #222;
@@ -45,7 +44,6 @@ body {
   text-shadow: 0 2px 6px rgba(0,0,0,.9);
   font-family: 'Montserrat', sans-serif;
 }
-
 
 .cityField {
   background: none;
