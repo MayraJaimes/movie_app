@@ -71,12 +71,12 @@
   ],
   "800": [
     {
-      "genre": 10770,
-      "question": "Are you sure don't want to go outside?"
+      "genre": 10402,
+      "question": "Perfect Weather to blast some Tunes!"
     },
     {
       "genre": 12,
-      "question": "I'm in the mood for an adventure (just not outside)!"
+      "question": "I'm in the mood for an adventure (on film)!"
     },
     {
       "genre": 16,
@@ -85,12 +85,12 @@
   ],
   "3": [
     {
-      "genre": 35,
-      "question": "Ugh, it's so gross outside."
+      "genre": 878,
+      "question": "I hope my robots are waterproof!"
     },
     {
-      "genre": 18,
-      "question": "Someone get the ice cream."
+      "genre": 36,
+      "question": "Since I'm stuck inside, I might as well learn something."
     },
     {
       "genre": 10749,
