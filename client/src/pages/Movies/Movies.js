@@ -15,6 +15,7 @@ class Movies extends Component {
     show : false,
     title: "",
     overview: "",
+    movieposter: "",
     availableon:[]
     // isOpen : false
 
@@ -27,10 +28,11 @@ class Movies extends Component {
       .catch(err => console.log(err));
   };
 
-  showModal = (title, overview) => {
+  showModal = (title, overview, movieposter) => {
     this.setState({ show: true });
     this.setState({title: title});
     this.setState({overview : overview});
+    this.setState({movieposter: movieposter})
     unirest.get("https://utelly-tv-shows-and-movies-availability-v1.p.mashape.com/lookup?country=us&term=" + title)
       .header("X-Mashape-Key", process.env.REACT_APP_UTELLY_API_KEY)
       .header("Accept", "application/json")
@@ -53,7 +55,8 @@ class Movies extends Component {
     axios
       .post("/savemovie", {
         name: this.state.title,
-        desc: this.state.overview
+        desc: this.state.overview,
+        movieposter: this.state.movieposter
       })
       .then(function(response) {
         alert('Movie was saved successfully')
@@ -74,7 +77,7 @@ class Movies extends Component {
             <ListWrapper>
             {this.state.movies.map(movie => (
               <ListItem key={movie.id}>
-                  <a onClick={() => this.showModal(movie.title, movie.overview)} data-target="#movieModal" data-toggle="modal" href="#movieModal">
+                  <a onClick={() => this.showModal(movie.title, movie.overview, movie.poster_path)} data-target="#movieModal" data-toggle="modal" href="#movieModal">
                   <img className="card-img-top" alt={movie.title} src={"https://image.tmdb.org/t/p/w600_and_h900_bestv2" + movie.poster_path}/>
                   </a>
               </ListItem>
