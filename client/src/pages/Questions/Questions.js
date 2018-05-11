@@ -7,7 +7,7 @@ import './Questions.css';
 class Questions extends Component {
   state = {
     weather: '',
-    defaultWeather: 'Clear'
+    defaultWeather: '800'
   };
 
   componentDidMount() {
@@ -15,7 +15,14 @@ class Questions extends Component {
     console.log(city);
     API.getWeather(city)
       .then(res => {
-        this.setState({ weather: res.data.weather[0].main }, () => console.log(res.data));
+        const weatherCondition = res.data.weather[0].id;
+        const weatherNum =
+          weatherCondition < 800
+            ? weatherCondition.toString()[0]
+            : weatherCondition === 800 
+              ? weatherCondition 
+              : 900;
+        this.setState({ weather: weatherNum });
       })
       .catch(err => console.log(err));
   }

@@ -1,102 +1,98 @@
 {
-  "Rain": [
+  "5": [
     {
-      "id": 1,
       "genre": 35,
       "question": "Need a pick me up?"
     },
     {
-      "id": 2,
       "genre": 18,
       "question": "I'd rather wallow in my sadness."
     },
     {
-      "id": 3,
       "genre": 10749,
       "question": "Let us pick for you."
     }
   ],
-  "Clear": [
+  "6": [
     {
-      "id": 4,
-      "genre": 10770,
-      "question": "Are you sure don't want to go outside?"
-    },
-    {
-      "id": 5,
-      "genre": 12,
-      "question": "I'm in the mood for an adventure (just not outside)!"
-    },
-    {
-      "id": 6,
-      "genre": 16,
-      "question": "Let us pick for you."
-    }
-  ],
-  "Snow": [
-    {
-      "id": 7,
       "genre": 28,
       "question": "I love the snow!"
     },
     {
-      "id": 8,
       "genre": 35,
       "question": "I'm totally over winter."
     },
     {
-      "id": 9,
       "genre": 99,
       "question": "Let us pick for you."
     }
   ],
-  "Thunderstorm": [
+  "2": [
     {
-      "id": 10,
       "genre": 10751,
       "question": "I'm a wuss!"
     },
     {
-      "id": 11,
       "genre": 27,
       "question": "I wanna be scurred!"
     },
     {
-      "id": 12,
       "genre": 14,
       "question": "Let us pick for you."
     }
   ],
-  "Fog": [
+  "7": [
     {
-      "id": 13,
       "genre": 27,
       "question": "Looks spooky out..."
     },
     {
-      "id": 14,
       "genre": 878,
       "question": "Great day for Sci-Fi."
     },
     {
-      "id": 15,
       "genre": 10749,
       "question": "Let us pick for you."
     }
   ],
-  "Clouds": [
+  "900": [
     {
-      "id": 16,
       "genre": 35,
       "question": "Ugh, it's so gross outside."
     },
     {
-      "id": 17,
       "genre": 18,
       "question": "Someone get the ice cream."
     },
     {
-      "id": 18,
+      "genre": 10749,
+      "question": "Let us pick for you."
+    }
+  ],
+  "800": [
+    {
+      "genre": 10770,
+      "question": "Are you sure don't want to go outside?"
+    },
+    {
+      "genre": 12,
+      "question": "I'm in the mood for an adventure (just not outside)!"
+    },
+    {
+      "genre": 16,
+      "question": "Let us pick for you."
+    }
+  ],
+  "3": [
+    {
+      "genre": 35,
+      "question": "Ugh, it's so gross outside."
+    },
+    {
+      "genre": 18,
+      "question": "Someone get the ice cream."
+    },
+    {
       "genre": 10749,
       "question": "Let us pick for you."
     }

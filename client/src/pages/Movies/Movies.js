@@ -23,9 +23,10 @@ class Movies extends Component {
     var movieArray;
     API.search(this.props.match.params.id)
       .then(res =>
-        this.setState({ movies: (res.data.results).splice(0, 4) }, () => console.log(this.state.movies)))
+        this.setState({ movies: (res.data.results).splice(0, 4) }))
       .catch(err => console.log(err));
   };
+  
 
   showModal = (title, overview) => {
     this.setState({ show: true });
