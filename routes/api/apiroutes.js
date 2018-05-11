@@ -53,7 +53,7 @@ router.get('/getsavedmovies' , (req , res)=>{
 // route for saving movie to database
 router.post('/savemovie' , (req,res)=>{
     email = req.user.email || 'unknown';
-    var movieData = {name:req.body.name,desc:req.body.desc};
+    var movieData = {name:req.body.name,desc:req.body.desc,movieposter: req.body.movieposter};
     db.User.findOneAndUpdate({'email':email},{$push:{movies: movieData}}, {new:true})
       .then(movie => {
         res.status(200).json(movie);

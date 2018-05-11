@@ -29,6 +29,7 @@ class WatchList extends Component {
                 {
                   this.state.movies.map(movie => {
                       return (<div className='savedmovies'>
+                          <img className="movieImage" alt={movie.title} src={"https://image.tmdb.org/t/p/w600_and_h900_bestv2" + movie.movieposter} />
                           <h5> {movie.name} </h5>
                           <h6> {movie.desc} </h6>
                       </div>)

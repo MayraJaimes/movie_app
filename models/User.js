@@ -9,6 +9,9 @@ let movieSchema = new Schema({
     },
     desc : {
         type: String
+    },
+    movieposter : {
+        type: String
     }
 });
 
