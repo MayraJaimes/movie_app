@@ -22,19 +22,25 @@ class WatchList extends Component {
     
     render() {
         return (
-            <div>
-                <hr />
+            <div className="container">
                 <h1>Watch List</h1>
-                <hr/>
+                <div className="row">
+                
                 {
                   this.state.movies.map(movie => {
-                      return (<div className='savedmovies'>
+                      return (
+                      <div className="col-sm-6 margin-bottom-20px">
+                      <div className='savedmovies'>
                           <img className="movieImage" alt={movie.title} src={"https://image.tmdb.org/t/p/w600_and_h900_bestv2" + movie.movieposter} />
+                          <div className="movie-description">
                           <h5> {movie.name} </h5>
-                          <h6> {movie.desc} </h6>
+                          <p> {movie.desc} </p>
+                          </div>
+                      </div>
                       </div>)
                   })  
                 }
+                </div>
             </div>
         )
     }

@@ -2,10 +2,22 @@
   text-align: center;
 }
 
-body {
-  background-image: url(/assets/images/clouds.jpg);
+html {
+  height: 100%;
+  background: url(/assets/images/clouds.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  height: 100vh;
+  background-color: #666666;
+}
+
+body {
+  /* background: url(/assets/images/clouds.jpg);
+  background-size: cover; */
+  height: 100%;
+  /* background-repeat: no-repeat; */
+  background-color: transparent;
 }
 
 .fc-icon {
